@@ -1,3 +1,9 @@
+## my other repos:
+
+- #### [fullstack course](https://github.com/golanm16/fullstack-course)
+- #### [pure react](https://github.com/golanm16/React_course)
+- #### [memory game](https://github.com/golanm16/memory_game)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
