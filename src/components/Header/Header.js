@@ -1,5 +1,10 @@
 import "./Header.css";
-export const Header = ({ categories, setChosenCategory }) => {
+export const Header = ({
+  categories,
+  setChosenCategory,
+  setSortBy,
+  sortValues,
+}) => {
   return (
     <nav className="product-filter">
       <h1>Shop</h1>
@@ -18,17 +23,14 @@ export const Header = ({ categories, setChosenCategory }) => {
         </div>{" "}
         <div className="collection-sort">
           <label>Sort by:</label>
-          <select>
-            <option value="/">Featured</option>
-            <option value="/">Best Selling</option>
-            <option value="/">Alphabetically, A-Z</option>
-            <option value="/">Alphabetically, Z-A</option>
-            <option value="/">Price, low to high</option>
-            <option value="/">Price, high to low</option>
-            <option value="/">Date, new to old</option>
-            <option value="/">Date, old to new</option>
+          <select onChange={(e) => setSortBy(e.target.value)}>
+            {sortValues.map((sv) => (
+              <option key={`cat-${sv.title}`} value={sv.value}>
+                {sv.title}
+              </option>
+            ))}
           </select>
-        </div>{" "}
+        </div>
       </div>
     </nav>
   );
