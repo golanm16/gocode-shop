@@ -19,11 +19,16 @@
   cursor: pointer;
 }
 
+.rating {
+  margin-bottom: 6px;
+}
+
 .product-image img {
   width: 100%;
 }
 
 .product-info {
+  color: inherit;
   margin-top: auto;
   padding-top: 20px;
   text-align: center;

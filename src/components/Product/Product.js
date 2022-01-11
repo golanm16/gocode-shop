@@ -6,7 +6,7 @@ export const Product = ({ id, title, price, image, rating }) => (
     </div>
     <div className="product-info">
       <h5>{title}</h5>
-      <h6>{`rating: ${rating.rate}⭐ (${rating.count}🖊)`}</h6>
+      <h6 className="rating">{`rating: ${rating.rate}⭐ (${rating.count}🖊)`}</h6>
       <h6>{`${price} ₪`}</h6>
     </div>
   </div>
