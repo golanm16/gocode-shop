@@ -1,3 +1,4 @@
+import { AddProduct } from "../AddProduct/AddProduct";
 import "./Header.css";
 export const Header = ({
   categories,
@@ -8,6 +9,7 @@ export const Header = ({
   return (
     <nav className="product-filter">
       <h1>Shop</h1>
+      <AddProduct categories={categories} />
       <div className="sort">
         <div className="collection-sort">
           <label>Filter by:</label>

@@ -1,6 +1,8 @@
 import { Product } from "../Product/Product";
 import "./Products.css";
+
 const strCompare = (str1, str2) => (str1 < str2 ? -1 : str1 > str2 ? 1 : 0);
+
 const sortFunc = {
   none: (products) => "",
   best: (products) => products.sort((a, b) => b.rating.rate - a.rating.rate),
@@ -14,9 +16,6 @@ const sortFunc = {
 let counter = 0;
 
 export const Products = ({ products, chosenCategory, sortBy }) => {
-  console.log(
-    `rerndering products ${counter++} \nfilter:${chosenCategory} \nsort:${sortBy}`
-  );
   sortFunc[sortBy](products);
 
   return (
@@ -27,7 +26,7 @@ export const Products = ({ products, chosenCategory, sortBy }) => {
         )
         .map(({ id, title, price, image, rating }) => (
           <Product
-            key={`product-${id}`}
+            key={id}
             id={id}
             title={title}
             price={price}
